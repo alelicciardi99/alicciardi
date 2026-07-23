@@ -1,5 +1,5 @@
 /* ============================================================
-   Alessandro Licciardi — academic site
+   Alessandro Licciardi, academic site
    Single page, anchor navigation. Neutral academic styling.
    ============================================================ */
 
@@ -145,23 +145,20 @@ p { margin: 0 0 16px; }
   font-size: 13.5px;
 }
 
-/* ---------- Research interests (themed) ---------- */
-.interests { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; margin: 8px 0 20px; padding: 0; list-style: none; }
-.interests li {
-  padding-left: 15px;
+/* ---------- Research interests (plain list) ---------- */
+.interest-list { margin: 8px 0 20px; padding: 0; list-style: none; }
+.interest-list li {
+  padding-left: 16px;
   position: relative;
-  font-size: 15px;
-  line-height: 1.5;
+  margin-bottom: 7px;
+  font-size: 15.5px;
 }
-.interests li::before {
+.interest-list li::before {
   content: "";
-  position: absolute; left: 0; top: 9px;
+  position: absolute; left: 0; top: 10px;
   width: 6px; height: 6px; border-radius: 50%;
   background: var(--accent);
 }
-.interests b { color: var(--text); font-weight: 650; }
-.interests span { color: var(--muted); }
-@media (max-width: 640px) { .interests { grid-template-columns: 1fr; } }
 
 .subtle { color: var(--muted); }
 .small { font-size: 14.5px; }

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alessandro Licciardi</title>
-  <meta name="description" content="Alessandro Licciardi — PhD Candidate in Mathematical Sciences, Politecnico di Torino.">
+  <meta name="description" content="Alessandro Licciardi, PhD Candidate in Mathematical Sciences, Politecnico di Torino.">
   <meta name="author" content="Alessandro Licciardi">
   <!-- Relative asset paths so the site resolves correctly under the
        GitHub Pages project path /alicciardi/ as well as in local preview. -->
@@ -51,35 +51,30 @@
       <h2>About</h2>
 
       <p>I am a PhD candidate in Mathematical Sciences at Politecnico di Torino, in the
-      Department of Mathematical Sciences (DISMA), supervised by Lamberto Rondoni, with
-      expected completion in November 2026. My research sits at the interface of machine
-      learning and the mathematical and physical sciences, held together by a preference for
-      principled, probabilistic methods.</p>
+      Department of Mathematical Sciences (DISMA), supervised by Lamberto Rondoni, and I expect
+      to complete the PhD in November 2026.</p>
 
-      <p>A central thread is <strong>federated learning</strong>: training models across many
-      heterogeneous clients when their data cannot be shared. I develop methods that cluster
-      clients by modelling their interactions through the statistics of their local losses,
-      published at ICML 2025, and that detect malicious clients from compact spectral
-      representations. This is where probabilistic and sampling-based ideas — variance-reduced
-      Boltzmann sampling, interaction-aware weighting — do much of the work.</p>
+      <p>From 2025 to 2026 I was a Visiting Student Researcher in Grant Rotskoff's group at
+      Stanford, working on rare event sampling and transition path sampling. The question there
+      is how to characterize and sample transitions between metastable states of a stochastic
+      system when those transitions are too rare to reach by direct simulation, and the tools
+      are large deviation theory and stochastic dynamics. This is the direction I want to keep
+      working in, and it draws on the statistical mechanics side of my training with Rondoni.</p>
 
-      <p>The same probabilistic outlook drives my interest in <strong>AI in science</strong>.
-      As a Visiting Student Researcher in Grant Rotskoff's group at Stanford (2025–2026), I
-      worked on rare event sampling and transition path sampling, using large deviation theory
-      and stochastic dynamics to characterize transitions between metastable states. More
-      broadly, I am drawn to generative and probabilistic modelling as tools for physical
-      problems, and to the mathematical and physical-mathematics foundations of machine
-      learning, including its statistical mechanics.</p>
+      <p>Most of my published work is in federated learning, where a model is trained across many
+      clients whose data cannot be pooled and is usually heterogeneous. I developed a method that
+      clusters clients by modelling their interactions through the statistics of their local
+      losses, published at ICML 2025, and methods that identify corrupted clients from compact
+      spectral representations computed once, offline. Sampling arguments turn up here as well,
+      in recent work that selects representative clients by Boltzmann sampling with variance
+      reduction.</p>
 
-      <p>Running through much of my published work is the <strong>wavelet scattering
-      transform</strong>, a structured preprocessing operator I have applied across three
-      settings that do not usually appear together: marine mammal vocalizations, glitches in
-      gravitational wave detector data, and anomaly detection in federated learning. The same
-      operator does the work in each case, because it produces representations that are stable
-      to deformation and invariant to translation, independently of the domain the signal comes
-      from. Alongside this, through an industrial collaboration with Eltek S.p.A., I developed a
-      physics-informed dimensionality reduction for estimating humidity from sensor time
-      series.</p>
+      <p>Those spectral representations come from the wavelet scattering transform, which I have
+      also applied to marine mammal vocalizations and to glitches in gravitational wave detector
+      data. It carries across all three because it is stable to deformation and invariant to
+      translation whatever the signal happens to be. Separately, through an industrial
+      collaboration with Eltek S.p.A., I developed a physics-informed dimensionality reduction
+      for estimating humidity from sensor time series.</p>
 
       <p>Before the PhD I completed a Master's in Mathematical Engineering at Politecnico di
       Torino, 110/110 cum laude, with a thesis on the wavelet scattering transform applied to
@@ -89,13 +84,11 @@
       ICLR, and referee for IEEE Journal of Oceanic Engineering and Ecological Informatics.</p>
 
       <h4>Research interests</h4>
-      <ul class="interests">
-        <li><b>Federated Learning</b> — <span>heterogeneous and clustered settings, interaction modelling, robustness</span></li>
-        <li><b>Probabilistic &amp; sampling methods</b> — <span>variance-reduced Boltzmann sampling, large deviation theory</span></li>
-        <li><b>AI in Science</b> — <span>rare-event and transition path sampling; ML for physics and bioacoustics</span></li>
-        <li><b>Generative &amp; probabilistic modelling</b></li>
-        <li><b>Mathematical &amp; physical-mathematics methods for AI</b> — <span>statistical mechanics of machine learning</span></li>
-        <li><b>Wavelet scattering transform</b> — <span>structured preprocessing operators</span></li>
+      <ul class="interest-list">
+        <li>Rare event sampling, transition path sampling, and large deviation theory</li>
+        <li>Federated learning in heterogeneous and clustered settings</li>
+        <li>Wavelet scattering transform and structured signal representations</li>
+        <li>Kinetic and probabilistic modelling on networks, including opinion dynamics</li>
       </ul>
 
       <h4>Education</h4>
@@ -127,8 +120,8 @@
       </ul>
 
       <p class="subtle small" style="margin-top:22px">
-        Outside research: music — electric and acoustic guitar, psychedelic rock, blues and jazz —
-        and writing and poetry. A longstanding interest in marine mammals.
+        Music, electric and acoustic guitar, psychedelic rock, blues and jazz. Writing and poetry.
+        A longstanding interest in marine mammals.
       </p>
     </section>
 
@@ -136,116 +129,65 @@
     <section id="research">
       <h2>Research</h2>
 
-      <p class="note">A single method runs through the first three areas below: the
-      <strong>wavelet scattering transform</strong>, a structured preprocessing operator whose
-      representations are stable to deformation and invariant to translation. The same operator
-      underpins my work on marine-mammal vocalizations, gravitational-wave detector data, and
-      anomaly detection in federated learning.</p>
-
-      <!-- Area 1 -->
+      <!-- Federated Learning -->
       <div class="area">
-        <h3>1 · Marine Mammal Bioacoustics</h3>
-        <p>My bioacoustics research centres on WhaleNet, a deep-learning architecture for
-        classifying marine-mammal vocalizations from the Watkins Marine Mammal Sound Database.
-        Each call is described through both wavelet scattering and spectrogram representations,
-        which are combined as inputs to the classifier.</p>
-        <figure class="figure">
-          <img src="assets/grafical_abstract.jpg" alt="WhaleNet graphical abstract: passive acoustic monitoring, three input representations, and the classification output.">
-          <figcaption><em>WhaleNet: A Novel Deep Learning Architecture for Marine Mammals
-          Vocalizations on the Watkins Marine Mammal Sound Database</em>, 2024. Graphical abstract:
-          passive acoustic monitoring, the three input representations, and the classification output.</figcaption>
-        </figure>
-        <ul class="area-pubs">
-          <li><span class="me">A. Licciardi</span>, D. Carbone. WhaleNet: A Novel Deep Learning
-          Architecture for Marine Mammals Vocalizations on the Watkins Marine Mammal Sound Database.
-          <span class="pub-venue">IEEE Access, 12, 154182–154194, 2024.</span>
-          <a href="https://doi.org/10.1109/ACCESS.2024.3482117" target="_blank" rel="noopener">doi:10.1109/ACCESS.2024.3482117</a></li>
-        </ul>
-      </div>
-
-      <!-- Area 2 -->
-      <div class="area">
-        <h3>2 · Gravitational Wave Data Analysis</h3>
-        <p>In gravitational-wave data analysis I apply the wavelet scattering transform to the
-        characterization of glitches, the transient noise artefacts that contaminate detector
-        output. Scattering representations of a glitch are set alongside the conventional
-        time–frequency (Q-transform) view.</p>
-        <figure class="figure">
-          <img src="assets/wst_vs_qt.png" alt="Q-transform spectrogram compared with first- and second-order wavelet scattering transforms of the same detector glitch.">
-          <figcaption><em>Wavelet Scattering Transform for Gravitational Waves Analysis: An
-          Application to Glitch Characterization</em>, 2025. Q-transform spectrogram compared with
-          first- and second-order wavelet scattering transforms of the same detector glitch.</figcaption>
-        </figure>
-        <ul class="area-pubs">
-          <li><span class="me">A. Licciardi</span>, D. Carbone, L. Rondoni, A. Nagar. Wavelet
-          Scattering Transform for Gravitational Waves Analysis: An Application to Glitch
-          Characterization. <span class="pub-venue">Physical Review D, 111(8), 084044, 2025.</span>
-          <a href="https://doi.org/10.1103/PhysRevD.111.084044" target="_blank" rel="noopener">doi:10.1103/PhysRevD.111.084044</a></li>
-        </ul>
-      </div>
-
-      <!-- Area 3 -->
-      <div class="area">
-        <h3>3 · Federated Learning</h3>
-        <p>Federated learning is the core of my current research: training shared models across
-        many clients whose data remain local and are typically heterogeneous. One published
-        method clusters clients by modelling their interactions through the statistics of their
-        local losses (ICML 2025); a second combines wavelet scattering with a Fourier
-        representation for offline detection of malicious clients — again the scattering operator
-        that runs through Areas 1 and 2.</p>
-
+        <h3>Federated Learning</h3>
+        <p>Federated learning trains a model across many clients whose data cannot be pooled and
+        are usually heterogeneous. My work here clusters clients by modelling their interactions
+        through the statistics of their local losses, and identifies corrupted clients from
+        compact spectral representations computed once, offline.</p>
         <figure class="figure narrow">
           <img src="assets/fig_fl_attacks.png" alt="Example client data under two attack models: clean, additive noise, and blur.">
-          <figcaption><em>Wavelet Scattering Transform and Fourier Representation for Offline
-          Detection of Malicious Clients in Federated Learning</em>, 2026. Example client data under
-          the two attack models: clean, additive noise, and blur.</figcaption>
+          <figcaption>Example client data under the two attack models: clean, additive noise, and blur.</figcaption>
         </figure>
-
         <figure class="figure">
           <img src="assets/diagram_fedcvr.png" alt="Clustering with probabilistic representative selection and server-side aggregation.">
-          <figcaption><span class="tag">Preprint</span> <em>Tackling Heterogeneity in Federated
-          Learning via Variance-Reduced Boltzmann Sampling within Homogeneous Social Coalitions</em>,
-          2026. Clustering with probabilistic representative selection and server-side aggregation.</figcaption>
+          <figcaption><span class="tag">Preprint</span> Clustering with probabilistic representative
+          selection and server-side aggregation.</figcaption>
         </figure>
-
-        <ul class="area-pubs">
-          <li><span class="me">A. Licciardi</span>, D. Leo, E. Fanì, B. Caputo, M. Ciccone.
-          Interaction-Aware Gaussian Weighting for Clustered Federated Learning.
-          <span class="pub-venue">Proceedings of the 42nd International Conference on Machine Learning
-          (ICML), PMLR 267:37642–37666, 2025.</span></li>
-          <li><span class="me">A. Licciardi</span>, D. Leo, D. Carbone. Wavelet Scattering Transform
-          and Fourier Representation for Offline Detection of Malicious Clients in Federated Learning.
-          <span class="pub-venue">IEEE Internet of Things Journal, 2026.</span>
-          <a href="https://doi.org/10.1109/JIOT.2026.3671698" target="_blank" rel="noopener">doi:10.1109/JIOT.2026.3671698</a></li>
-          <li><span class="tag">Preprint</span> <span class="me">A. Licciardi</span>, R. Raineri,
-          A. Proskurnikov, L. Rondoni, L. Zino. Tackling Heterogeneity in Federated Learning via
-          Variance-Reduced Boltzmann Sampling within Homogeneous Social Coalitions.
-          <span class="pub-venue">Preprint, 2026.</span>
-          <a href="https://arxiv.org/abs/2506.02897" target="_blank" rel="noopener">arXiv:2506.02897</a></li>
-        </ul>
       </div>
 
-      <!-- Area 4 -->
+      <!-- Marine Mammal Bioacoustics -->
       <div class="area">
-        <h3>4 · Physics-Informed Machine Learning</h3>
-        <p>Developed through an industrial collaboration with Eltek S.p.A., this work estimates
-        humidity from sensor time series using a physics-informed dimensionality reduction. A
-        physical model informs the reduction, from which physical parameters are recovered and
-        passed to a network that predicts humidity.</p>
+        <h3>Marine Mammal Bioacoustics</h3>
+        <p>WhaleNet is a deep learning architecture that classifies marine mammal vocalizations
+        from the Watkins Marine Mammal Sound Database. The wavelet scattering transform used in
+        this work is the shared method across three of these areas.</p>
         <figure class="figure">
-          <img src="assets/fig_pidr_architecture.png" alt="Architecture: physical model, dimensionality reduction, recovered physical parameters, and the humidity prediction network.">
-          <figcaption><em>A Machine Learning Model for Humidity Estimation Based on Physics-Informed
-          Dimensionality Reduction</em>, 2025. Architecture: the physical model, the dimensionality
-          reduction, the recovered physical parameters, and the humidity prediction network.</figcaption>
+          <img src="assets/grafical_abstract.jpg" alt="Passive acoustic monitoring, the three input representations, and the classification output.">
+          <figcaption>Passive acoustic monitoring, the three input representations, and the
+          classification output.</figcaption>
         </figure>
-        <ul class="area-pubs">
-          <li><span class="me">A. Licciardi</span>, S. Bernardi, M. Pizzi, P. Begnamino, L. Rondoni.
-          A Machine Learning Model for Humidity Estimation Based on Physics-Informed Dimensionality
-          Reduction. <span class="pub-venue">Nonlinear Dynamics, 113(23), 31941–31963, 2025.</span></li>
-        </ul>
       </div>
 
-      <!-- Full publication list -->
+      <!-- Gravitational Wave Data Analysis -->
+      <div class="area">
+        <h3>Gravitational Wave Data Analysis</h3>
+        <p>This work characterizes glitches in gravitational wave detector data. It compares a
+        scattering representation of a glitch with the standard time-frequency (Q-transform)
+        view.</p>
+        <figure class="figure">
+          <img src="assets/wst_vs_qt.png" alt="A Q-transform spectrogram beside first and second order wavelet scattering transforms of the same glitch.">
+          <figcaption>A Q-transform spectrogram beside the first and second order wavelet
+          scattering transforms of the same detector glitch.</figcaption>
+        </figure>
+      </div>
+
+      <!-- Physics-Informed Machine Learning -->
+      <div class="area">
+        <h3>Physics-Informed Machine Learning</h3>
+        <p>Through an industrial collaboration with Eltek S.p.A., this work estimates humidity
+        from sensor time series using a physics-informed dimensionality reduction. A physical
+        model informs the reduction, from which physical parameters are recovered and passed to a
+        network that predicts humidity.</p>
+        <figure class="figure">
+          <img src="assets/fig_pidr_architecture.png" alt="The physical model, the dimensionality reduction, the recovered physical parameters, and the humidity prediction network.">
+          <figcaption>The physical model, the dimensionality reduction, the recovered physical
+          parameters, and the humidity prediction network.</figcaption>
+        </figure>
+      </div>
+
+      <!-- Publications -->
       <h3 style="margin-top:40px">Publications</h3>
       <ol class="pubs">
         <li>
@@ -346,6 +288,18 @@
           <span class="where">Teaching Assistant, Politecnico di Torino, 2025–present.</span></li>
         <li><strong>Mathematical Analysis I</strong> (English course).
           <span class="where">Teaching Assistant, Politecnico di Torino, 2024–present.</span></li>
+      </ul>
+
+      <h4>Students supervised</h4>
+      <ul class="entries small">
+        <li><strong>Simone Parisi</strong>, master's student in Physics of Complex Systems,
+          Università degli Studi di Torino, 2025.
+          <span class="where">Thesis: <em>Inverse Problems with Diffusion Models and Physics-Informed
+          Machine Learning</em>. In progress.</span></li>
+        <li><strong>Andrea Rinaudo</strong>, master's student in Mathematical Engineering,
+          Politecnico di Torino, 2026.
+          <span class="where">Thesis: <em>Security Analysis of Federated Split Learning Protocols</em>.
+          In progress.</span></li>
       </ul>
     </section>
 
