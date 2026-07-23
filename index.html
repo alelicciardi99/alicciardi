@@ -51,25 +51,35 @@
       <h2>About</h2>
 
       <p>I am a PhD candidate in Mathematical Sciences at Politecnico di Torino, in the
-      Department of Mathematical Sciences (DISMA), supervised by Lamberto Rondoni. I expect
-      to complete the PhD in November 2026. I was a Visiting Student Researcher in Grant
-      Rotskoff's group at Stanford, where I worked on rare event sampling and transition path
-      sampling, using large deviation theory and stochastic dynamics to characterize
-      transitions between metastable states.</p>
+      Department of Mathematical Sciences (DISMA), supervised by Lamberto Rondoni, with
+      expected completion in November 2026. My research sits at the interface of machine
+      learning and the mathematical and physical sciences, held together by a preference for
+      principled, probabilistic methods.</p>
 
-      <p>Much of my published work develops the wavelet scattering transform as a structured
-      preprocessing operator and applies it across three settings that do not usually appear
-      together: marine mammal vocalizations, glitches in gravitational wave detector data, and
-      anomaly detection in federated learning. The same operator does the work in each case,
-      and the reason it transfers is that it produces representations which are stable to
-      deformation and invariant to translation, independently of the domain the signal comes
-      from.</p>
+      <p>A central thread is <strong>federated learning</strong>: training models across many
+      heterogeneous clients when their data cannot be shared. I develop methods that cluster
+      clients by modelling their interactions through the statistics of their local losses,
+      published at ICML 2025, and that detect malicious clients from compact spectral
+      representations. This is where probabilistic and sampling-based ideas — variance-reduced
+      Boltzmann sampling, interaction-aware weighting — do much of the work.</p>
 
-      <p>I also work on federated learning in heterogeneous and clustered settings, including a
-      method that clusters clients by modelling their interactions through the statistics of
-      their local losses, published at ICML 2025. Separately, through an industrial
-      collaboration with Eltek S.p.A., I developed a physics-informed dimensionality reduction
-      approach for estimating humidity from sensor time series.</p>
+      <p>The same probabilistic outlook drives my interest in <strong>AI for science</strong>.
+      As a Visiting Student Researcher in Grant Rotskoff's group at Stanford, I worked on rare
+      event sampling and transition path sampling, using large deviation theory and stochastic
+      dynamics to characterize transitions between metastable states. More broadly, I am drawn
+      to generative and probabilistic modelling as tools for physical problems, and to the
+      mathematical and physical-mathematics foundations of machine learning, including its
+      statistical mechanics.</p>
+
+      <p>Running through much of my published work is the <strong>wavelet scattering
+      transform</strong>, a structured preprocessing operator I have applied across three
+      settings that do not usually appear together: marine mammal vocalizations, glitches in
+      gravitational wave detector data, and anomaly detection in federated learning. The same
+      operator does the work in each case, because it produces representations that are stable
+      to deformation and invariant to translation, independently of the domain the signal comes
+      from. Alongside this, through an industrial collaboration with Eltek S.p.A., I developed a
+      physics-informed dimensionality reduction for estimating humidity from sensor time
+      series.</p>
 
       <p>Before the PhD I completed a Master's in Mathematical Engineering at Politecnico di
       Torino, 110/110 cum laude, with a thesis on the wavelet scattering transform applied to
@@ -79,13 +89,13 @@
       ICLR, and referee for IEEE Journal of Oceanic Engineering and Ecological Informatics.</p>
 
       <h4>Research interests</h4>
-      <ul class="chips">
-        <li>Wavelet scattering transform</li>
-        <li>Rare event sampling &amp; large deviation theory</li>
-        <li>Federated learning</li>
-        <li>Machine learning for physics &amp; bioacoustics</li>
-        <li>Physics-informed machine learning</li>
-        <li>Statistical mechanics of machine learning</li>
+      <ul class="interests">
+        <li><b>Federated Learning</b> — <span>heterogeneous and clustered settings, interaction modelling, robustness</span></li>
+        <li><b>Probabilistic &amp; sampling methods</b> — <span>variance-reduced Boltzmann sampling, large deviation theory</span></li>
+        <li><b>AI in Science</b> — <span>rare-event and transition path sampling; ML for physics and bioacoustics</span></li>
+        <li><b>Generative &amp; probabilistic modelling</b></li>
+        <li><b>Mathematical &amp; physical-mathematics methods for AI</b> — <span>statistical mechanics of machine learning</span></li>
+        <li><b>Wavelet scattering transform</b> — <span>structured preprocessing operators</span></li>
       </ul>
 
       <h4>Education</h4>
@@ -251,6 +261,12 @@
       <h3 style="margin-top:40px">Publications</h3>
       <ol class="pubs">
         <li>
+          <span class="pub-title"><span class="me">A. Licciardi</span>, D. Leo, E. Fanì, B. Caputo,
+          M. Ciccone. Interaction-Aware Gaussian Weighting for Clustered Federated Learning.</span>
+          <span class="pub-venue">Proceedings of the 42nd International Conference on Machine Learning
+          (ICML), PMLR 267:37642–37666, 2025.</span>
+        </li>
+        <li>
           <span class="pub-title"><span class="me">A. Licciardi</span>, D. Leo, D. Carbone.
           Wavelet Scattering Transform and Fourier Representation for Offline Detection of Malicious
           Clients in Federated Learning.</span>
@@ -262,12 +278,6 @@
           P. Begnamino, L. Rondoni. A Machine Learning Model for Humidity Estimation Based on
           Physics-Informed Dimensionality Reduction.</span>
           <span class="pub-venue">Nonlinear Dynamics, 113(23), 31941–31963, 2025.</span>
-        </li>
-        <li>
-          <span class="pub-title"><span class="me">A. Licciardi</span>, D. Leo, E. Fanì, B. Caputo,
-          M. Ciccone. Interaction-Aware Gaussian Weighting for Clustered Federated Learning.</span>
-          <span class="pub-venue">Proceedings of the 42nd International Conference on Machine Learning
-          (ICML), PMLR 267:37642–37666, 2025.</span>
         </li>
         <li>
           <span class="pub-title"><span class="me">A. Licciardi</span>, D. Carbone, L. Rondoni,
@@ -347,18 +357,6 @@
           <span class="where">Teaching Assistant, Politecnico di Torino, 2025–present.</span></li>
         <li><strong>Mathematical Analysis I</strong> (English course).
           <span class="where">Teaching Assistant, Politecnico di Torino, 2024–present.</span></li>
-      </ul>
-
-      <h4>Students supervised</h4>
-      <ul class="entries small">
-        <li><strong>Simone Parisi</strong>, master's student in Physics of Complex Systems,
-          Università degli Studi di Torino, 2025.
-          <span class="where">Thesis: <em>Inverse Problems with Diffusion Models and Physics-Informed
-          Machine Learning</em>. In progress.</span></li>
-        <li><strong>Andrea Rinaudo</strong>, master's student in Mathematical Engineering,
-          Politecnico di Torino, 2026.
-          <span class="where">Thesis: <em>Security Analysis of Federated Split Learning Protocols</em>.
-          In progress.</span></li>
       </ul>
     </section>
 
