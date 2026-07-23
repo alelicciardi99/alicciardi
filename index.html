@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alessandro Licciardi</title>
+  <meta name="description" content="Alessandro Licciardi — PhD Candidate in Mathematical Sciences, Politecnico di Torino.">
+  <meta name="author" content="Alessandro Licciardi">
+  <!-- Relative asset paths so the site resolves correctly under the
+       GitHub Pages project path /alicciardi/ as well as in local preview. -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- mysite:credit=true mysite:discovery=true -->
+  <meta name="generator" content="mysite">
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <span class="nav-brand">Alessandro Licciardi</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#talks">Talks</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact</a>
+        <a class="cv" href="assets/cv_public.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header">
+      <img class="photo" src="assets/photo.png" alt="Photograph of Alessandro Licciardi">
+      <div>
+        <h1>Alessandro Licciardi</h1>
+        <p class="role">PhD Candidate, Department of Mathematical Sciences, Politecnico di Torino</p>
+        <p class="advisor">Advised by Lamberto Rondoni</p>
+        <div class="btns">
+          <a class="btn primary" href="assets/cv_public.pdf" target="_blank" rel="noopener">Curriculum Vitae</a>
+          <a class="btn ghost" href="mailto:alessandro.licciardi@polito.it">Email</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about">
+      <h2>About</h2>
+
+      <p>I am a PhD candidate in Mathematical Sciences at Politecnico di Torino, in the
+      Department of Mathematical Sciences (DISMA), supervised by Lamberto Rondoni. I expect
+      to complete the PhD in November 2026. I was a Visiting Student Researcher in Grant
+      Rotskoff's group at Stanford, where I worked on rare event sampling and transition path
+      sampling, using large deviation theory and stochastic dynamics to characterize
+      transitions between metastable states.</p>
+
+      <p>Much of my published work develops the wavelet scattering transform as a structured
+      preprocessing operator and applies it across three settings that do not usually appear
+      together: marine mammal vocalizations, glitches in gravitational wave detector data, and
+      anomaly detection in federated learning. The same operator does the work in each case,
+      and the reason it transfers is that it produces representations which are stable to
+      deformation and invariant to translation, independently of the domain the signal comes
+      from.</p>
+
+      <p>I also work on federated learning in heterogeneous and clustered settings, including a
+      method that clusters clients by modelling their interactions through the statistics of
+      their local losses, published at ICML 2025. Separately, through an industrial
+      collaboration with Eltek S.p.A., I developed a physics-informed dimensionality reduction
+      approach for estimating humidity from sensor time series.</p>
+
+      <p>Before the PhD I completed a Master's in Mathematical Engineering at Politecnico di
+      Torino, 110/110 cum laude, with a thesis on the wavelet scattering transform applied to
+      VIRGO gravitational wave data, following a Bachelor's in Mathematics for Engineering at
+      the same institution. My PhD is supported by an industrial scholarship co-funded by the
+      Italian Ministry of University and Research and Eltek S.p.A. I review for NeurIPS and
+      ICLR, and referee for IEEE Journal of Oceanic Engineering and Ecological Informatics.</p>
+
+      <h4>Research interests</h4>
+      <ul class="chips">
+        <li>Wavelet scattering transform</li>
+        <li>Rare event sampling &amp; large deviation theory</li>
+        <li>Federated learning</li>
+        <li>Machine learning for physics &amp; bioacoustics</li>
+        <li>Physics-informed machine learning</li>
+        <li>Statistical mechanics of machine learning</li>
+      </ul>
+
+      <h4>Education</h4>
+      <ul class="entries small">
+        <li>
+          <strong>M.Sc. in Mathematical Engineering</strong>, Politecnico di Torino, 2021–2023,
+          110/110 cum laude.
+          <span class="where">Thesis: <em>Wavelet Scattering Transform. Mathematical Analysis and
+          Applications to VIRGO Gravitational Waves Data</em>.</span>
+        </li>
+        <li>
+          <strong>B.Sc. in Mathematics for Engineering</strong>, Politecnico di Torino, 2018–2021,
+          110/110 cum laude.
+        </li>
+      </ul>
+
+      <h4>Affiliations</h4>
+      <ul class="entries small">
+        <li>Visiting Student Researcher, Rotskoff Lab, Stanford University. <span class="where">Completed.</span></li>
+        <li>Associated member, Istituto Nazionale di Alta Matematica (INdAM), Gruppo Nazionale di Fisica Matematica (GNFM).</li>
+        <li>Associated member, Istituto Nazionale di Fisica Nucleare (INFN), Sezione di Torino.</li>
+        <li>Member, Models and Methods of Mathematical Physics research group, DISMA (PI: Lamberto Rondoni).</li>
+      </ul>
+
+      <h4>Funding</h4>
+      <ul class="entries small">
+        <li>Industrial PhD Scholarship (MUR DM 117), co-funded by the Italian Ministry of University
+        and Research and Eltek S.p.A., 2023–2026.</li>
+      </ul>
+
+      <p class="subtle small" style="margin-top:22px">
+        Outside research: music — electric and acoustic guitar, psychedelic rock, blues and jazz —
+        and writing and poetry. A longstanding interest in marine mammals.
+      </p>
+    </section>
+
+    <!-- ===================== RESEARCH ===================== -->
+    <section id="research">
+      <h2>Research</h2>
+
+      <p class="note">The <strong>wavelet scattering transform</strong> is the common method
+      running through Areas 1, 2 and 3: a single structured preprocessing operator applied,
+      respectively, to marine mammal vocalizations, gravitational wave detector data, and signals
+      in federated learning.</p>
+
+      <!-- Area 1 -->
+      <div class="area">
+        <h3>1 · Marine Mammal Bioacoustics</h3>
+        <p>This line of work applies the wavelet scattering transform to marine mammal
+        vocalizations. WhaleNet is a deep learning architecture for classifying marine mammal
+        calls from the Watkins Marine Mammal Sound Database, combining wavelet scattering and
+        spectrogram representations as input to the classifier.</p>
+        <figure class="figure">
+          <img src="assets/grafical_abstract.jpg" alt="WhaleNet graphical abstract: passive acoustic monitoring, three input representations, and the classification output.">
+          <figcaption><em>WhaleNet: A Novel Deep Learning Architecture for Marine Mammals
+          Vocalizations on the Watkins Marine Mammal Sound Database</em>, 2024. Graphical abstract:
+          passive acoustic monitoring, the three input representations, and the classification output.</figcaption>
+        </figure>
+        <ul class="area-pubs">
+          <li><span class="me">A. Licciardi</span>, D. Carbone. WhaleNet: A Novel Deep Learning
+          Architecture for Marine Mammals Vocalizations on the Watkins Marine Mammal Sound Database.
+          <span class="pub-venue">IEEE Access, 12, 154182–154194, 2024.</span>
+          <a href="https://doi.org/10.1109/ACCESS.2024.3482117" target="_blank" rel="noopener">doi:10.1109/ACCESS.2024.3482117</a></li>
+        </ul>
+      </div>
+
+      <!-- Area 2 -->
+      <div class="area">
+        <h3>2 · Gravitational Wave Data Analysis</h3>
+        <p>Here the wavelet scattering transform is applied to gravitational wave detector data
+        for the characterization of glitches — transient noise artefacts in the detector output.
+        The study compares scattering representations of detector signals with a standard
+        time–frequency view.</p>
+        <figure class="figure">
+          <img src="assets/wst_vs_qt.png" alt="Q-transform spectrogram compared with first- and second-order wavelet scattering transforms of the same detector glitch.">
+          <figcaption><em>Wavelet Scattering Transform for Gravitational Waves Analysis: An
+          Application to Glitch Characterization</em>, 2025. Q-transform spectrogram compared with
+          first- and second-order wavelet scattering transforms of the same detector glitch.</figcaption>
+        </figure>
+        <ul class="area-pubs">
+          <li><span class="me">A. Licciardi</span>, D. Carbone, L. Rondoni, A. Nagar. Wavelet
+          Scattering Transform for Gravitational Waves Analysis: An Application to Glitch
+          Characterization. <span class="pub-venue">Physical Review D, 111(8), 084044, 2025.</span>
+          <a href="https://doi.org/10.1103/PhysRevD.111.084044" target="_blank" rel="noopener">doi:10.1103/PhysRevD.111.084044</a></li>
+        </ul>
+      </div>
+
+      <!-- Area 3 -->
+      <div class="area">
+        <h3>3 · Federated Learning</h3>
+        <p>This work studies federated learning in heterogeneous and clustered settings. One
+        published method clusters clients by modelling their interactions through the statistics
+        of their local losses; another uses the wavelet scattering transform, together with a
+        Fourier representation, for offline detection of malicious clients — again the same
+        scattering operator that runs through Areas 1 and 2.</p>
+
+        <figure class="figure narrow">
+          <img src="assets/fig_fl_attacks.png" alt="Example client data under two attack models: clean, additive noise, and blur.">
+          <figcaption><em>Wavelet Scattering Transform and Fourier Representation for Offline
+          Detection of Malicious Clients in Federated Learning</em>, 2026. Example client data under
+          the two attack models: clean, additive noise, and blur.</figcaption>
+        </figure>
+
+        <figure class="figure">
+          <img src="assets/diagram_fedcvr.png" alt="Clustering with probabilistic representative selection and server-side aggregation.">
+          <figcaption><span class="tag">Preprint</span> <em>Tackling Heterogeneity in Federated
+          Learning via Variance-Reduced Boltzmann Sampling within Homogeneous Social Coalitions</em>,
+          2026. Clustering with probabilistic representative selection and server-side aggregation.</figcaption>
+        </figure>
+
+        <ul class="area-pubs">
+          <li><span class="me">A. Licciardi</span>, D. Leo, E. Fanì, B. Caputo, M. Ciccone.
+          Interaction-Aware Gaussian Weighting for Clustered Federated Learning.
+          <span class="pub-venue">Proceedings of the 42nd International Conference on Machine Learning
+          (ICML), PMLR 267:37642–37666, 2025.</span></li>
+          <li><span class="me">A. Licciardi</span>, D. Leo, D. Carbone. Wavelet Scattering Transform
+          and Fourier Representation for Offline Detection of Malicious Clients in Federated Learning.
+          <span class="pub-venue">IEEE Internet of Things Journal, 2026.</span>
+          <a href="https://doi.org/10.1109/JIOT.2026.3671698" target="_blank" rel="noopener">doi:10.1109/JIOT.2026.3671698</a></li>
+          <li><span class="tag">Preprint</span> <span class="me">A. Licciardi</span>, R. Raineri,
+          A. Proskurnikov, L. Rondoni, L. Zino. Tackling Heterogeneity in Federated Learning via
+          Variance-Reduced Boltzmann Sampling within Homogeneous Social Coalitions.
+          <span class="pub-venue">Preprint, 2026.</span></li>
+        </ul>
+      </div>
+
+      <!-- Area 4 -->
+      <div class="area">
+        <h3>4 · Physics-Informed Machine Learning</h3>
+        <p>Developed through an industrial collaboration with Eltek S.p.A., this work estimates
+        humidity from sensor time series using a physics-informed dimensionality reduction. A
+        physical model informs the reduction, from which physical parameters are recovered and
+        passed to a network that predicts humidity.</p>
+        <figure class="figure">
+          <img src="assets/fig_pidr_architecture.png" alt="Architecture: physical model, dimensionality reduction, recovered physical parameters, and the humidity prediction network.">
+          <figcaption><em>A Machine Learning Model for Humidity Estimation Based on Physics-Informed
+          Dimensionality Reduction</em>, 2025. Architecture: the physical model, the dimensionality
+          reduction, the recovered physical parameters, and the humidity prediction network.</figcaption>
+        </figure>
+        <ul class="area-pubs">
+          <li><span class="me">A. Licciardi</span>, S. Bernardi, M. Pizzi, P. Begnamino, L. Rondoni.
+          A Machine Learning Model for Humidity Estimation Based on Physics-Informed Dimensionality
+          Reduction. <span class="pub-venue">Nonlinear Dynamics, 113(23), 31941–31963, 2025.</span></li>
+        </ul>
+      </div>
+
+      <!-- Area 5 -->
+      <div class="area">
+        <h3>5 · Kinetic Opinion Dynamics on Networks</h3>
+        <p>This work studies kinetic models of opinion formation on networks, using graphon limits
+        to pass from large real-world networks to a continuum description, under selective media
+        influence. It is currently a <strong>preprint under review</strong>.</p>
+        <ul class="area-pubs">
+          <li><span class="tag">Preprint</span> B. Düring, M. Fraia, <span class="me">A. Licciardi</span>.
+          From Graphons to Real-World Networks: Kinetic Opinion Dynamics under Selective Media Influence.
+          <span class="pub-venue">Preprint, 2026. Under review at Mathematical Models and Methods in
+          Applied Sciences (M3AS).</span>
+          <a href="https://arxiv.org/abs/2607.02821" target="_blank" rel="noopener">arXiv:2607.02821</a></li>
+        </ul>
+      </div>
+
+      <!-- Full publication list -->
+      <h3 style="margin-top:40px">Publications</h3>
+      <ol class="pubs">
+        <li>
+          <span class="pub-title"><span class="me">A. Licciardi</span>, D. Leo, D. Carbone.
+          Wavelet Scattering Transform and Fourier Representation for Offline Detection of Malicious
+          Clients in Federated Learning.</span>
+          <span class="pub-venue">IEEE Internet of Things Journal, 2026.</span>
+          <a href="https://doi.org/10.1109/JIOT.2026.3671698" target="_blank" rel="noopener">doi:10.1109/JIOT.2026.3671698</a>
+        </li>
+        <li>
+          <span class="pub-title"><span class="me">A. Licciardi</span>, S. Bernardi, M. Pizzi,
+          P. Begnamino, L. Rondoni. A Machine Learning Model for Humidity Estimation Based on
+          Physics-Informed Dimensionality Reduction.</span>
+          <span class="pub-venue">Nonlinear Dynamics, 113(23), 31941–31963, 2025.</span>
+        </li>
+        <li>
+          <span class="pub-title"><span class="me">A. Licciardi</span>, D. Leo, E. Fanì, B. Caputo,
+          M. Ciccone. Interaction-Aware Gaussian Weighting for Clustered Federated Learning.</span>
+          <span class="pub-venue">Proceedings of the 42nd International Conference on Machine Learning
+          (ICML), PMLR 267:37642–37666, 2025.</span>
+        </li>
+        <li>
+          <span class="pub-title"><span class="me">A. Licciardi</span>, D. Carbone, L. Rondoni,
+          A. Nagar. Wavelet Scattering Transform for Gravitational Waves Analysis: An Application to
+          Glitch Characterization.</span>
+          <span class="pub-venue">Physical Review D, 111(8), 084044, 2025.</span>
+          <a href="https://doi.org/10.1103/PhysRevD.111.084044" target="_blank" rel="noopener">doi:10.1103/PhysRevD.111.084044</a>
+        </li>
+        <li>
+          <span class="pub-title"><span class="me">A. Licciardi</span>, D. Carbone. WhaleNet: A Novel
+          Deep Learning Architecture for Marine Mammals Vocalizations on the Watkins Marine Mammal
+          Sound Database.</span>
+          <span class="pub-venue">IEEE Access, 12, 154182–154194, 2024.</span>
+          <a href="https://doi.org/10.1109/ACCESS.2024.3482117" target="_blank" rel="noopener">doi:10.1109/ACCESS.2024.3482117</a>
+        </li>
+      </ol>
+
+      <h3 style="margin-top:34px">Preprints</h3>
+      <ol class="pubs">
+        <li>
+          <span class="pub-title"><span class="me">A. Licciardi</span>, R. Raineri, A. Proskurnikov,
+          L. Rondoni, L. Zino. Tackling Heterogeneity in Federated Learning via Variance-Reduced
+          Boltzmann Sampling within Homogeneous Social Coalitions.</span>
+          <span class="pub-venue">Preprint, 2026.</span>
+        </li>
+        <li>
+          <span class="pub-title">B. Düring, M. Fraia, <span class="me">A. Licciardi</span>. From
+          Graphons to Real-World Networks: Kinetic Opinion Dynamics under Selective Media Influence.</span>
+          <span class="pub-venue">Preprint, 2026. Under review at Mathematical Models and Methods in
+          Applied Sciences (M3AS).</span>
+          <a href="https://arxiv.org/abs/2607.02821" target="_blank" rel="noopener">arXiv:2607.02821</a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===================== TALKS ===================== -->
+    <section id="talks">
+      <h2>Talks</h2>
+      <ul class="entries">
+        <li><span class="kind">Invited talk</span> Mathematical Advances in Federated Learning:
+          Interaction Modeling and Clustering, Spectral Representations and Anomaly Detection.
+          <span class="where">Seminars of the Department of Mathematics, Università di Bologna,
+          2 July 2026.</span></li>
+        <li><span class="kind">Invited talk</span> Principled, Communication-Light Federated Learning:
+          Interaction Modeling and Offline Spectral Representations for Clustering and Robustness.
+          <span class="where">Cambridge Machine Learning Systems Seminar (CaMLSys), University of
+          Cambridge, 15 June 2026.</span></li>
+        <li><span class="kind">Poster</span> Tackling Heterogeneity in Federated Learning via
+          Variance-Reduced Boltzmann Sampling within Homogeneous Social Coalitions.
+          <span class="where">Italian Conference on Computational Social Science (CS2Italy), Torino,
+          19–21 May 2026.</span></li>
+        <li><span class="kind">Poster</span> Interaction-Aware Gaussian Weighting for Clustered
+          Federated Learning. <span class="where">42nd International Conference on Machine Learning
+          (ICML), Vancouver, 13–19 July 2025.</span></li>
+        <li><span class="kind">Contributed talk</span> Applications of the Wavelet Scattering
+          Transform in Machine Learning: from Gravitational Waves and Whale Vocalizations to
+          Communication-Efficient Anomaly Detection in Federated Learning.
+          <span class="where">ScatterBrains, Politecnico di Torino, 16 April 2025.</span></li>
+        <li><span class="kind">Contributed talk</span> Wavelet Scattering Operators for Machine
+          Learning in Bioacoustics and Astrophysics. <span class="where">GNFM Summer School in
+          Mathematical Physics, September 2024.</span></li>
+        <li><span class="kind">Invited speaker</span> Non-Linear Operators in AI: from Time-Series
+          Analysis to Texture Discrimination. <span class="where">GIMC-SIMAI Young, Università degli
+          Studi di Napoli Federico II, July 2024.</span></li>
+        <li><span class="kind">Contributed talk</span> Wavelet Scattering Operators for Multiscale
+          Processes: The Case Study of Marine Mammal Vocalizations. <span class="where">2nd
+          International Conference on Nonlinear Dynamics and Applications (ICNDA), Sikkim Manipal
+          University, February 2024.</span></li>
+      </ul>
+    </section>
+
+    <!-- ===================== TEACHING ===================== -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul class="entries">
+        <li><strong>Mathematical Analysis II</strong> (English and Italian courses).
+          <span class="where">Teaching Assistant, Politecnico di Torino, 2025–present.</span></li>
+        <li><strong>Mathematical Analysis I</strong> (English course).
+          <span class="where">Teaching Assistant, Politecnico di Torino, 2024–present.</span></li>
+      </ul>
+
+      <h4>Students supervised</h4>
+      <ul class="entries small">
+        <li><strong>Simone Parisi</strong>, master's student in Physics of Complex Systems,
+          Università degli Studi di Torino, 2025.
+          <span class="where">Thesis: <em>Inverse Problems with Diffusion Models and Physics-Informed
+          Machine Learning</em>. In progress.</span></li>
+        <li><strong>Andrea Rinaudo</strong>, master's student in Mathematical Engineering,
+          Politecnico di Torino, 2026.
+          <span class="where">Thesis: <em>Security Analysis of Federated Split Learning Protocols</em>.
+          In progress.</span></li>
+      </ul>
+    </section>
+
+    <!-- ===================== SERVICE ===================== -->
+    <section id="service">
+      <h2>Service</h2>
+      <ul class="entries">
+        <li>Reviewer, Conference on Neural Information Processing Systems (NeurIPS), 2026.</li>
+        <li>Reviewer, International Conference on Learning Representations (ICLR), 2026.</li>
+        <li>Referee, IEEE Journal of Oceanic Engineering, 2025–present.
+          <span class="where">Two manuscripts reviewed.</span></li>
+        <li>Referee, Ecological Informatics (Elsevier), 2025–present.
+          <span class="where">Six manuscripts reviewed.</span></li>
+      </ul>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <dl class="contact-grid">
+        <dt>Email</dt>
+        <dd><a href="mailto:alessandro.licciardi@polito.it">alessandro.licciardi@polito.it</a></dd>
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/alelicciardi99" target="_blank" rel="noopener">github.com/alelicciardi99</a></dd>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://linkedin.com/in/alessandro-licciardi" target="_blank" rel="noopener">linkedin.com/in/alessandro-licciardi</a></dd>
+        <dt>ORCID</dt>
+        <dd><a href="https://orcid.org/0009-0006-8428-3408" target="_blank" rel="noopener">0009-0006-8428-3408</a></dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Alessandro Licciardi</span>
+      <span>Built with the <a href="https://gking.harvard.edu/mysite" target="_blank" rel="noopener">mysite</a> template.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
