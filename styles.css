@@ -242,6 +242,26 @@ ol.pubs li::before {
 }
 .entries .where { color: var(--muted); font-size: 14.5px; }
 
+/* ---------- Collapsible earlier talks ---------- */
+.more-talks { margin: 0; }
+.more-talks > summary {
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  margin: 16px 0 0;
+  padding: 7px 15px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+.more-talks > summary::-webkit-details-marker { display: none; }
+.more-talks > summary::after { content: "  ↓"; }
+.more-talks[open] > summary::after { content: "  ↑"; }
+.more-talks[open] > summary { margin-bottom: 4px; }
+.more-talks > summary:hover { border-color: var(--accent); background: #fff; }
+
 /* ---------- Contact ---------- */
 .contact-grid { display: grid; grid-template-columns: 90px 1fr; gap: 6px 16px; font-size: 16px; }
 .contact-grid dt { color: var(--muted); }
