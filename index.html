@@ -63,13 +63,13 @@
       representations. This is where probabilistic and sampling-based ideas — variance-reduced
       Boltzmann sampling, interaction-aware weighting — do much of the work.</p>
 
-      <p>The same probabilistic outlook drives my interest in <strong>AI for science</strong>.
-      As a Visiting Student Researcher in Grant Rotskoff's group at Stanford, I worked on rare
-      event sampling and transition path sampling, using large deviation theory and stochastic
-      dynamics to characterize transitions between metastable states. More broadly, I am drawn
-      to generative and probabilistic modelling as tools for physical problems, and to the
-      mathematical and physical-mathematics foundations of machine learning, including its
-      statistical mechanics.</p>
+      <p>The same probabilistic outlook drives my interest in <strong>AI in science</strong>.
+      As a Visiting Student Researcher in Grant Rotskoff's group at Stanford (2025–2026), I
+      worked on rare event sampling and transition path sampling, using large deviation theory
+      and stochastic dynamics to characterize transitions between metastable states. More
+      broadly, I am drawn to generative and probabilistic modelling as tools for physical
+      problems, and to the mathematical and physical-mathematics foundations of machine
+      learning, including its statistical mechanics.</p>
 
       <p>Running through much of my published work is the <strong>wavelet scattering
       transform</strong>, a structured preprocessing operator I have applied across three
@@ -114,7 +114,7 @@
 
       <h4>Affiliations</h4>
       <ul class="entries small">
-        <li>Visiting Student Researcher, Rotskoff Lab, Stanford University. <span class="where">Completed.</span></li>
+        <li>Visiting Student Researcher, Rotskoff Lab, Stanford University, 2025–2026. <span class="where">Completed.</span></li>
         <li>Associated member, Istituto Nazionale di Alta Matematica (INdAM), Gruppo Nazionale di Fisica Matematica (GNFM).</li>
         <li>Associated member, Istituto Nazionale di Fisica Nucleare (INFN), Sezione di Torino.</li>
         <li>Member, Models and Methods of Mathematical Physics research group, DISMA (PI: Lamberto Rondoni).</li>
@@ -136,18 +136,19 @@
     <section id="research">
       <h2>Research</h2>
 
-      <p class="note">The <strong>wavelet scattering transform</strong> is the common method
-      running through Areas 1, 2 and 3: a single structured preprocessing operator applied,
-      respectively, to marine mammal vocalizations, gravitational wave detector data, and signals
-      in federated learning.</p>
+      <p class="note">A single method runs through the first three areas below: the
+      <strong>wavelet scattering transform</strong>, a structured preprocessing operator whose
+      representations are stable to deformation and invariant to translation. The same operator
+      underpins my work on marine-mammal vocalizations, gravitational-wave detector data, and
+      anomaly detection in federated learning.</p>
 
       <!-- Area 1 -->
       <div class="area">
         <h3>1 · Marine Mammal Bioacoustics</h3>
-        <p>This line of work applies the wavelet scattering transform to marine mammal
-        vocalizations. WhaleNet is a deep learning architecture for classifying marine mammal
-        calls from the Watkins Marine Mammal Sound Database, combining wavelet scattering and
-        spectrogram representations as input to the classifier.</p>
+        <p>My bioacoustics research centres on WhaleNet, a deep-learning architecture for
+        classifying marine-mammal vocalizations from the Watkins Marine Mammal Sound Database.
+        Each call is described through both wavelet scattering and spectrogram representations,
+        which are combined as inputs to the classifier.</p>
         <figure class="figure">
           <img src="assets/grafical_abstract.jpg" alt="WhaleNet graphical abstract: passive acoustic monitoring, three input representations, and the classification output.">
           <figcaption><em>WhaleNet: A Novel Deep Learning Architecture for Marine Mammals
@@ -165,10 +166,10 @@
       <!-- Area 2 -->
       <div class="area">
         <h3>2 · Gravitational Wave Data Analysis</h3>
-        <p>Here the wavelet scattering transform is applied to gravitational wave detector data
-        for the characterization of glitches — transient noise artefacts in the detector output.
-        The study compares scattering representations of detector signals with a standard
-        time–frequency view.</p>
+        <p>In gravitational-wave data analysis I apply the wavelet scattering transform to the
+        characterization of glitches, the transient noise artefacts that contaminate detector
+        output. Scattering representations of a glitch are set alongside the conventional
+        time–frequency (Q-transform) view.</p>
         <figure class="figure">
           <img src="assets/wst_vs_qt.png" alt="Q-transform spectrogram compared with first- and second-order wavelet scattering transforms of the same detector glitch.">
           <figcaption><em>Wavelet Scattering Transform for Gravitational Waves Analysis: An
@@ -186,11 +187,12 @@
       <!-- Area 3 -->
       <div class="area">
         <h3>3 · Federated Learning</h3>
-        <p>This work studies federated learning in heterogeneous and clustered settings. One
-        published method clusters clients by modelling their interactions through the statistics
-        of their local losses; another uses the wavelet scattering transform, together with a
-        Fourier representation, for offline detection of malicious clients — again the same
-        scattering operator that runs through Areas 1 and 2.</p>
+        <p>Federated learning is the core of my current research: training shared models across
+        many clients whose data remain local and are typically heterogeneous. One published
+        method clusters clients by modelling their interactions through the statistics of their
+        local losses (ICML 2025); a second combines wavelet scattering with a Fourier
+        representation for offline detection of malicious clients — again the scattering operator
+        that runs through Areas 1 and 2.</p>
 
         <figure class="figure narrow">
           <img src="assets/fig_fl_attacks.png" alt="Example client data under two attack models: clean, additive noise, and blur.">
@@ -218,7 +220,8 @@
           <li><span class="tag">Preprint</span> <span class="me">A. Licciardi</span>, R. Raineri,
           A. Proskurnikov, L. Rondoni, L. Zino. Tackling Heterogeneity in Federated Learning via
           Variance-Reduced Boltzmann Sampling within Homogeneous Social Coalitions.
-          <span class="pub-venue">Preprint, 2026.</span></li>
+          <span class="pub-venue">Preprint, 2026.</span>
+          <a href="https://arxiv.org/abs/2506.02897" target="_blank" rel="noopener">arXiv:2506.02897</a></li>
         </ul>
       </div>
 
@@ -239,21 +242,6 @@
           <li><span class="me">A. Licciardi</span>, S. Bernardi, M. Pizzi, P. Begnamino, L. Rondoni.
           A Machine Learning Model for Humidity Estimation Based on Physics-Informed Dimensionality
           Reduction. <span class="pub-venue">Nonlinear Dynamics, 113(23), 31941–31963, 2025.</span></li>
-        </ul>
-      </div>
-
-      <!-- Area 5 -->
-      <div class="area">
-        <h3>5 · Kinetic Opinion Dynamics on Networks</h3>
-        <p>This work studies kinetic models of opinion formation on networks, using graphon limits
-        to pass from large real-world networks to a continuum description, under selective media
-        influence. It is currently a <strong>preprint under review</strong>.</p>
-        <ul class="area-pubs">
-          <li><span class="tag">Preprint</span> B. Düring, M. Fraia, <span class="me">A. Licciardi</span>.
-          From Graphons to Real-World Networks: Kinetic Opinion Dynamics under Selective Media Influence.
-          <span class="pub-venue">Preprint, 2026. Under review at Mathematical Models and Methods in
-          Applied Sciences (M3AS).</span>
-          <a href="https://arxiv.org/abs/2607.02821" target="_blank" rel="noopener">arXiv:2607.02821</a></li>
         </ul>
       </div>
 
@@ -302,6 +290,7 @@
           L. Rondoni, L. Zino. Tackling Heterogeneity in Federated Learning via Variance-Reduced
           Boltzmann Sampling within Homogeneous Social Coalitions.</span>
           <span class="pub-venue">Preprint, 2026.</span>
+          <a href="https://arxiv.org/abs/2506.02897" target="_blank" rel="noopener">arXiv:2506.02897</a>
         </li>
         <li>
           <span class="pub-title">B. Düring, M. Fraia, <span class="me">A. Licciardi</span>. From
